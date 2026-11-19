@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atul P. Pohane – QA Automation Engineer / SDET</title>
+<meta name="description" content="QA Automation Engineer and SDET with 5+ years of experience in Selenium, Playwright, Java, TypeScript, TestNG, REST Assured and CI/CD. Based in Pune, India.">
+<meta property="og:title" content="Atul P. Pohane – QA Automation Engineer / SDET">
+<meta property="og:description" content="I catch bugs before your users do. Test automation, API and performance testing for e-commerce and healthcare.">
+<meta property="og:image" content="assets/atul-pohane.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0A1020;--night2:#121B33;--paper:#F2F5FA;--card:#fff;--ink:#101A30;--mut:#56617C;--line:#D8DFEB;--pass:#35D391;--passd:#12804E;--fail:#FF5D6C;--warn:#FFC24B;--blue:#2F5BEA}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;margin:0;line-height:1.1}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--warn);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace}
+header.nav{position:sticky;top:0;z-index:9;background:rgba(10,16,32,.92);backdrop-filter:blur(8px)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.nav strong{color:#fff;font:800 18px "Bricolage Grotesque",sans-serif}
+.nav nav{display:flex;gap:22px}
+.nav a{color:#B8C4E2;text-decoration:none;font-size:15px}
+.nav a:hover{color:#fff}
+.hero{background:radial-gradient(900px 400px at 85% -10%,#1d2f66 0,transparent 60%),var(--night);color:#fff;padding:64px 0 0}
+.top{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(53,211,145,.5);color:var(--pass);padding:4px 14px;border-radius:999px;font-size:14px;margin-bottom:22px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--pass);box-shadow:0 0 0 4px rgba(53,211,145,.2)}
+.hero h1{font-size:clamp(44px,8vw,92px);font-weight:800;letter-spacing:-.035em}
+.hero .tag{font:500 clamp(20px,3vw,28px)/1.25 "Bricolage Grotesque",sans-serif;color:#C9D4F0;margin:18px 0 18px}
+.hero .tag b{color:var(--pass);font-weight:500}
+.hero p.lead{color:#AEBBDD;max-width:54ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid currentColor;cursor:pointer;font-size:16px;background:none}
+.btn.p{background:var(--pass);border-color:var(--pass);color:#06251A}
+.hero .btn{color:#fff}.hero .btn.p{color:#06251A}
+.btn:hover{filter:brightness(1.1)}
+.frame{position:relative;max-width:360px;justify-self:center}
+.frame img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:28px;border:2px solid rgba(255,255,255,.18);box-shadow:16px 16px 0 var(--pass)}
+.frame .chip{position:absolute;left:-18px;bottom:28px;background:#fff;color:var(--ink);padding:8px 14px;border-radius:10px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.frame .chip b{color:var(--passd)}
+.term{margin-top:56px;background:var(--night2);border:1px solid #243255;border-radius:14px 14px 0 0;border-bottom:0;overflow:hidden}
+.tbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid #243255;color:#8FA0C9;font-size:14px}
+.tbar button{font:500 13px "IBM Plex Mono",monospace;background:var(--pass);color:#06251A;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}
+#run{list-style:none;margin:0;padding:14px 18px;font-size:14.5px;line-height:1.5;min-height:250px}
+#run li{display:flex;gap:12px;padding:3px 0;color:#D6E0F5}
+#run .s{width:16px;flex:none;text-align:center}
+#run .ok .s{color:var(--pass)}#run .no .s{color:var(--fail)}#run .no{color:#FFC9CF}
+#run .run .s{color:var(--warn)}
+#run .fix{padding-left:28px;color:var(--warn)}
+.sum{padding:12px 18px;border-top:1px solid #243255;color:var(--pass);font-size:14px}
+.note{color:#7384B0;font-size:12.5px;margin-left:auto}
+.stats{background:var(--night2);border:1px solid #243255;border-top:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.stats div{padding:24px;border-right:1px solid #243255}
+.stats div:last-child{border:0}
+.stats b{display:block;font:800 clamp(34px,5vw,52px)/1 "Bricolage Grotesque",sans-serif;color:#fff}
+.stats span{color:#9DAAD0;font-size:15px}
+section{padding:84px 0 0}
+h2{font-size:clamp(32px,5vw,48px);font-weight:800;letter-spacing:-.025em;margin-bottom:10px}
+.sub{color:var(--mut);margin:0 0 32px;max-width:60ch}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why div{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--pass);border-radius:12px;padding:22px}
+.why h3{font-size:21px;margin-bottom:8px}.why p{margin:0;color:var(--mut)}
+.why div:nth-child(2){border-top-color:var(--blue)}.why div:nth-child(3){border-top-color:var(--warn)}
+details.case{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:14px}
+details.case[open]{border-color:var(--ink);box-shadow:6px 6px 0 var(--ink)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding:20px 24px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:24px}
+.st{font:500 13px "IBM Plex Mono",monospace;background:#DDF6EA;color:var(--passd);padding:4px 12px;border-radius:999px;white-space:nowrap}
+.st::after{content:" +"}details[open] .st::after{content:" –"}
+.meta{grid-column:1/-1;color:var(--mut);font-size:15px}
+.body{padding:0 24px 22px;display:grid;grid-template-columns:1fr 1fr;gap:8px 32px}
+.body p{margin:0 0 6px;grid-column:1/-1}
+.body ul{margin:0;padding-left:20px;grid-column:1/-1;columns:2;column-gap:32px}
+.body li{margin:4px 0;break-inside:avoid}
+.tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tags span{font:500 13px "IBM Plex Mono",monospace;border:1px solid var(--line);background:var(--paper);padding:3px 10px;border-radius:6px}
+.pipe{display:flex;gap:0;overflow-x:auto;padding:8px 2px 20px;margin:0;list-style:none;counter-reset:s}
+.pipe li{flex:1 0 170px;position:relative;padding:0 14px 0 0}
+.pipe li::before{content:"";position:absolute;top:17px;left:34px;right:0;height:3px;background:var(--pass)}
+.pipe li:last-child::before{display:none}
+.pipe .dot{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;background:var(--pass);color:#06251A;display:grid;place-items:center;font-weight:700;margin-bottom:14px}
+.pipe li:last-child .dot{background:var(--warn);box-shadow:0 0 0 6px rgba(255,194,75,.3)}
+.pipe h3{font-size:18px;margin-bottom:2px}.pipe p{margin:0;color:var(--mut);font-size:14.5px;line-height:1.4}
+.pipe .yr{font:500 12.5px "IBM Plex Mono",monospace;color:var(--passd);margin-bottom:4px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.skills div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.skills h3{font-size:19px;margin-bottom:12px}
+.skills span{display:inline-block;margin:0 6px 8px 0;padding:3px 11px;border-radius:999px;background:var(--night);color:#E4EBFB;font-size:14.5px}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.edu div{border-left:4px solid var(--blue);padding:4px 0 4px 16px}.edu h3{font-size:19px}.edu p{margin:2px 0 0;color:var(--mut);font-size:15px}
+.cta{background:var(--night);color:#fff;margin-top:96px;padding:72px 0 28px}
+.cta h2{max-width:16ch}.cta p{color:#AEBBDD;max-width:52ch;margin:0 0 26px}
+.cta .btn{color:#fff}.cta .btn.p{color:#06251A}
+footer{margin-top:56px;color:#7384B0;font-size:14px;border-top:1px solid #243255;padding-top:20px}
+@media(max-width:860px){
+ .top{grid-template-columns:1fr}.frame{max-width:280px;justify-self:start;order:-1;margin-bottom:10px}
+ .stats{grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid #243255}
+ .why,.skills,.edu{grid-template-columns:1fr}.body ul{columns:1}
+ .nav strong{display:none}.nav nav{gap:14px}.note{display:none}
+ .pipe{flex-direction:column;overflow:visible}.pipe li{padding:0 0 22px 52px;flex:none}
+ .pipe li::before{top:36px;left:17px;right:auto;width:3px;height:calc(100% - 30px)}.pipe .dot{position:absolute;left:0;top:0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><strong>Atul P. Pohane</strong>
+<nav aria-label="Primary"><a href="#projects">Projects</a><a href="#career">Career</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav></div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <div class="top">
+    <div>
+      <div class="badge mono"><i></i>Open to new roles</div>
+      <h1>Atul P. Pohane</h1>
+      <p class="tag">I catch bugs <b>before your users do.</b></p>
+      <p class="lead">QA Automation Engineer and SDET with 5+ years of testing e-commerce and healthcare applications. I build Selenium and Playwright frameworks, validate APIs and databases, and ship releases with confidence.</p>
+      <div class="btns">
+        <a class="btn p" href="assets/Atul_Pohane_Resume.pdf" download>Download resume</a>
+        <a class="btn" href="mailto:atulpohane1115@gmail.com">Hire me: email</a>
+      </div>
+    </div>
+    <div class="frame">
+      <img src="assets/atul-pohane.jpg" alt="Portrait of Atul P. Pohane" width="360" height="360">
+      <div class="chip mono">QA / SDET · Pune <b>✓ passed</b></div>
+    </div>
+  </div>
+
+  <div class="term">
+    <div class="tbar mono"><span>$ run --suite atul-pohane</span><span class="note">illustrative demo of my workflow</span><button id="again" type="button">▶ Run again</button></div>
+    <ul id="run" class="mono" aria-live="polite"></ul>
+    <div class="sum mono" id="sum">&nbsp;</div>
+  </div>
+  <div class="stats">
+    <div><b data-n="5" data-s="+">0</b><span>years in software testing</span></div>
+    <div><b data-n="50" data-s="+">0</b><span>Selenium scripts built</span></div>
+    <div><b data-n="30" data-s="%">0</b><span>faster regression cycles (approx.)</span></div>
+    <div><b data-n="100" data-s="+">0</b><span>defects logged in JIRA</span></div>
+  </div>
+</div></div>
+
+<section><div class="wrap">
+  <h2>Why teams hire me</h2>
+  <p class="sub">Three things I bring to every release.</p>
+  <div class="why">
+    <div><h3>Automation that saves time</h3><p>Page Object Model, data-driven and hybrid frameworks in Java and TypeScript, running in parallel on Jenkins and GitLab pipelines.</p></div>
+    <div><h3>Quality at every layer</h3><p>UI, REST API, SQL database and JMeter performance checks, so problems surface where they start, not in production.</p></div>
+    <div><h3>Clear client communication</h3><p>Daily syncs, defect triage, release readiness and production validation, with status that stakeholders can act on.</p></div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <p class="sub">Each one is a test case. Open it to see what I did.</p>
+
+  <details class="case" open><summary><h3>GPC ProLink</h3><span class="st">PASSED</span><span class="meta">E-commerce · Senior Consultant · Genuine Parts Company</span></summary>
+    <div class="body"><p>Automation and release validation for the ProLink e-commerce application.</p>
+    <ul><li>Owned QA for the Home page, Product Listing Page (PLP) and Product Details Page (PDP).</li><li>Built and maintained end-to-end Playwright and TypeScript scripts.</li><li>Ran release regression, ACES validation, PunchOut testing and production validation.</li><li>Tested mobile and tablet compatibility.</li><li>Synced daily with client stakeholders on progress, blockers and defects.</li><li>Tracked defects and retests in JIRA.</li></ul>
+    <div class="tags"><span>Playwright</span><span>TypeScript</span><span>JIRA</span></div></div></details>
+
+  <details class="case"><summary><h3>MarketMaven</h3><span class="st">PASSED</span><span class="meta">E-commerce · QA Automation Engineer / SDET</span></summary>
+    <div class="body"><p>End-to-end functional automation with API and database validation, wired into CI.</p>
+    <ul><li>Built Selenium WebDriver, Java and TestNG scripts with reusable components.</li><li>Integrated automated runs into Jenkins CI/CD pipelines.</li><li>Validated service responses through REST API testing.</li><li>Checked backend data and transactions with SQL queries.</li><li>Created functional and regression cases for critical workflows.</li><li>Logged and retested defects in JIRA with developers.</li></ul>
+    <div class="tags"><span>Selenium</span><span>Java</span><span>TestNG</span><span>Jenkins</span><span>REST API</span><span>SQL</span></div></div></details>
+
+  <details class="case"><summary><h3>Kijksluiter</h3><span class="st">PASSED</span><span class="meta">Healthcare · QA Automation Engineer</span></summary>
+    <div class="body"><p>Framework development, regression and performance validation for a healthcare application.</p>
+    <ul><li>Designed automation frameworks to speed up test execution.</li><li>Automated healthcare workflows and ran functional and regression tests.</li><li>Measured application performance with JMeter.</li><li>Analysed requirements and wrote test scenarios and cases.</li><li>Documented defects and verified fixes with regression runs.</li><li>Produced test execution reports for the team.</li></ul>
+    <div class="tags"><span>Selenium</span><span>Java</span><span>JMeter</span></div></div></details>
+
+  <details class="case"><summary><h3>NCPDP / NPMOO</h3><span class="st">PASSED</span><span class="meta">Healthcare / Pharmacy · QA Automation Engineer</span></summary>
+    <div class="body"><p>Testing for the EPS, EPS Store and ECC applications.</p>
+    <ul><li>Wrote and maintained test cases for EPS document creation.</li><li>Ran sanity, smoke and regression tests on EPS Store and ECC.</li><li>Validated REST APIs and end-to-end business workflows.</li><li>Automated end-to-end flows with Selenium and Java.</li><li>Used AI-based automation to improve testing efficiency.</li><li>Managed Jira release tickets and prepared application demos.</li></ul>
+    <div class="tags"><span>Selenium</span><span>Java</span><span>REST API</span><span>JIRA</span></div></div></details>
+</div></section>
+
+<section id="career"><div class="wrap">
+  <h2>Career pipeline</h2>
+  <p class="sub">Six stages, every one a step up in testing depth.</p>
+  <ol class="pipe">
+    <li><div class="dot">✓</div><div class="yr">2021 – 2022</div><h3>Software Engineer</h3><p>Bees Technologies<br>Chennai</p></li>
+    <li><div class="dot">✓</div><div class="yr">2022</div><h3>Junior Software Engineer</h3><p>Zensar Technologies<br>Pune</p></li>
+    <li><div class="dot">✓</div><div class="yr">2022 – 2024</div><h3>Quality Analyst</h3><p>SSL Infotech<br>Bangalore</p></li>
+    <li><div class="dot">✓</div><div class="yr">2024</div><h3>SDET II</h3><p>Byteridge Software<br>Hyderabad</p></li>
+    <li><div class="dot">✓</div><div class="yr">2024 – 2025</div><h3>Software Test Engineer</h3><p>Primus Global Technologies<br>Bangalore</p></li>
+    <li><div class="dot">★</div><div class="yr">Dec 2025 – Sep 2026</div><h3>Senior Consultant</h3><p>LanceSoft India<br>Latest role</p></li>
+  </ol>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Toolbox</h2>
+  <p class="sub">What I use day to day.</p>
+  <div class="skills">
+    <div><h3>Automation</h3><span>Selenium WebDriver</span><span>Playwright</span><span>TestNG</span><span>Cucumber</span><span>Page Object Model</span></div>
+    <div><h3>Languages</h3><span>Java</span><span>TypeScript</span><span>JavaScript</span><span>SQL</span></div>
+    <div><h3>API and performance</h3><span>REST Assured</span><span>Postman</span><span>SoapUI</span><span>JMeter</span><span>MySQL</span></div>
+    <div><h3>CI/CD and tools</h3><span>Jenkins</span><span>GitLab</span><span>Git</span><span>Maven</span><span>JIRA</span><span>Rally</span></div>
+    <div><h3>Testing types</h3><span>Functional</span><span>Regression</span><span>Smoke</span><span>Sanity</span><span>Integration</span><span>Compatibility</span><span>UAT</span></div>
+    <div><h3>Ways of working</h3><span>Agile</span><span>Scrum</span><span>Kanban</span><span>Test strategy</span><span>Defect triage</span></div>
+  </div>
+  <div class="edu">
+    <div><h3>MBA, Business Analytics</h3><p>Raisoni College of Engineering and Management, Pune · 2023 – 2025</p></div>
+    <div><h3>Bachelor of Engineering</h3><p>Bapurao Deshmukh College of Engineering, Wardha · 2017 – 2020</p></div>
+  </div>
+</div></section>
+</main>
+
+<div class="cta" id="contact"><div class="wrap">
+  <h2>Let's ship quality together.</h2>
+  <p>Open to QA Engineer, Senior SDET, Automation Test Engineer and Senior Consultant roles. Email is the fastest way to reach me.</p>
+  <div class="btns">
+    <a class="btn p" href="mailto:atulpohane1115@gmail.com">atulpohane1115@gmail.com</a>
+    <a class="btn" href="tel:+917796658557">+91 77966 58557</a>
+    <a class="btn" href="assets/Atul_Pohane_Resume.pdf" download>Resume (PDF)</a>
+  </div>
+  <footer>© <span id="yr">2026</span> Atul P. Pohane · Pune, Maharashtra, India</footer>
+</div></div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T=[["Playwright · ProLink PLP filters and sorting",0],["Playwright · PDP add to cart, end to end",0],["Cross-browser · Chrome, Firefox, WebKit",0],["REST Assured · order service response",0],["SQL · order total matches UI","fail"],["JMeter · load check, healthcare app",0],["Jenkins · pipeline triggered on commit",0]];
+  var ul=document.getElementById('run'),sum=document.getElementById('sum'),btn=document.getElementById('again'),busy=false;
+  function row(c,s,t){var l=document.createElement('li');l.className=c;l.innerHTML='<span class="s">'+s+'</span><span></span>';l.lastChild.textContent=t;ul.appendChild(l);return l}
+  function wait(ms){return new Promise(function(r){setTimeout(r,reduce?0:ms)})}
+  async function go(){
+    if(busy)return;busy=true;ul.innerHTML='';sum.innerHTML='&nbsp;';
+    for(var i=0;i<T.length;i++){
+      var l=row('run','…',T[i][0]);await wait(520);
+      if(T[i][1]==='fail'){
+        l.className='no';l.firstChild.textContent='✗';
+        var d=row('no','','expected 1,249.00 but got 1,294.00');await wait(600);
+        var f=row('fix','→','bug caught · logged in JIRA · fixed · retest ✓');await wait(700);
+      }else{l.className='ok';l.firstChild.textContent='✓'}
+    }
+    sum.textContent='6 passed · 1 bug caught before release · 0 shipped to users';busy=false;
+  }
+  btn.addEventListener('click',go);go();
+  var nums=[].slice.call(document.querySelectorAll('[data-n]'));
+  function count(el){var n=+el.dataset.n,s=el.dataset.s,t0=null;
+    if(reduce){el.textContent=n+s;return}
+    (function f(t){if(!t0)t0=t;var p=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+s;if(p<1)requestAnimationFrame(f)})(performance.now());}
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){count(x.target);io.unobserve(x.target)}})},{threshold:.6});nums.forEach(function(n){io.observe(n)})}
+  else nums.forEach(count);
+})();
+</script>
+</body>
+</html>
